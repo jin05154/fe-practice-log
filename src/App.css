@@ -26,7 +26,7 @@ body {
 :root {
   --toggle-background-default: #F0EFEF;
   --toggle-text-default: #A0A0A0;
-  --toggle-text-selected: #656565;
+  --toggle-text-selected: #4C4C4C;
 }
 
 .App {
@@ -45,47 +45,67 @@ body {
 }
 
 /* Toggle */
-.toggle-wrap {
+.toggle-switch {
+  position: relative;
+  display: inline-block;
   width: 400px;
-  height: 45px;
-  margin: 10px 0;
+  height: 44px;
 }
-.toggle-input {
+.toggle-switch input {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
-.toggle-input:checked + span {
-  transform: translateX(30px);
-}
 .toggle-slider {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 400px;
-  height: 45px;
-  padding: 0 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background-color: var(--toggle-background-default);
   border-radius: 50px;
-  color: var(--toggle-text-default);
-  font-weight: bold;
-  font-size: 1.1em;
+  transition: 0.5s;
   cursor: pointer;
 }
-.toggle-default {
-  display: inherit;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-}
-.toggle-selected {
-  display: inherit;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
+.toggle-slider:before {
+  position: absolute;
+  content: "";
   height: 39px;
+  width: 194px;
+  top: 3px;
+  left: 3px;
+  bottom: 3px;
   background-color: white;
-  color: var(--toggle-text-selected);
   border-radius: 50px;
+  transition: 0.3s;
+}
+input:checked + .toggle-slider:before {
+  transform: translateX(200px);
+}
+.toggle-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 44px;
+  margin: -44px 0 15px;
+  border-radius: 50px;
+  z-index: 9999;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.toggle-wrap .default {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  color: var(--toggle-text-default);
+  cursor: pointer;
+}
+.toggle-wrap .dark {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  color: var(--toggle-text-selected);
+  cursor: pointer;
 }
