@@ -3,12 +3,9 @@ import React, { useState } from "react";
 export default function Toggle() {
   // toggled == 상세
   const [toggled, setToggled] = useState(false);
-  const onClickDefault = () => {
-    setToggled(false);
-  }
-  const onClickDetails = () => {
-    setToggled(true);
-  }
+  const onClickDefault = () => setToggled(false);
+  const onClickDetails = () => setToggled(true);
+  
   return (
     <>
       <h2 className="subtitle">1. Toggle</h2>
@@ -20,7 +17,7 @@ export default function Toggle() {
         <div className={toggled ? "default" : "dark"} onClick={onClickDefault}>
           기본
         </div>
-        <div className={toggled ? "dark" : "default"}  onClick={onClickDetails}>
+        <div className={toggled ? "dark" : "default"} onClick={onClickDetails}>
           상세
         </div>
       </div>
