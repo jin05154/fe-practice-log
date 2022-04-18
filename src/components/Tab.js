@@ -10,7 +10,7 @@ export default function Tab() {
   return (
     <>
       <h2 className="subtitle">2. Tab</h2>
-      <label className="tabs">
+      <div className="tabs">
         <div
           className={clicked === 0 ? "tab-selected" : "tab-default"}
           onClick={onClickFirst}
@@ -29,7 +29,7 @@ export default function Tab() {
         >
           카레라이스
         </div>
-      </label>
+      </div>
       <div className="tab-slider">
         <Slider distance={clicked} />
       </div>
