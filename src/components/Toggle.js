@@ -10,7 +10,7 @@ export default function Toggle() {
     <>
       <h2 className="subtitle">1. Toggle</h2>
       <label className="toggle-switch">
-        <input type="checkbox" checked={toggled} />
+        <input type="checkbox" checked={toggled} readOnly />
         <span className="toggle-slider" />
       </label>
       <div className="toggle-wrap">
