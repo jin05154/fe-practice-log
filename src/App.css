@@ -27,6 +27,7 @@ body {
   --background-default: #F0EFEF;
   --text-default: #A0A0A0;
   --text-selected: #4C4C4C;
+  --login-border: #DDDDDD;
 }
 
 .App {
@@ -138,4 +139,39 @@ input:checked + .toggle-slider:before {
   height: 3px;
   background-color: var(--background-default);
   z-index: 1;
+}
+
+/* Input */
+.login {
+  display: flex;
+  flex-direction: column;
+}
+.login-form {
+  padding: 10px 0;
+}
+.input-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  background-color: var(--background-default);
+  border: 2px solid var(--login-border);
+  border-radius: 5px;
+}
+.input-form {
+  width: 250px;
+  height: 40px;
+  padding-left: 12px;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+.input-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+}
+#visible {
+  cursor: pointer;
 }
