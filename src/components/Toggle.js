@@ -21,7 +21,6 @@ export default function Toggle() {
           상세
         </div>
       </div>
-      <p>선택된 항목은 " {toggled ? "상세" : "기본"} "</p>
     </>
   );
 }
