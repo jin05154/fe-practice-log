@@ -5,6 +5,7 @@ import "./App.css";
 import Toggle from "./components/Toggle";
 import Tab from "./components/Tab";
 import Input from "./components/Input";
+import Dropdown from "./components/Dropdown";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Toggle />
       <Tab />
       <Input />
+      <Dropdown />
     </div>
   );
 }
