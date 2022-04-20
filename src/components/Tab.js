@@ -31,7 +31,7 @@ export default function Tab() {
         </div>
       </div>
       <div className="tab-slider">
-        <Slider distance={clicked} />
+        <Slider clicked={clicked} />
       </div>
     </>
   );
@@ -42,6 +42,6 @@ const Slider = styled.div`
   height: 3px;
   background-color: green;
   z-index: 9999;
-  transform: translateX(calc(${(props) => props.distance} * 180px));
+  transform: translateX(calc(${(props) => props.clicked} * 180px));
   transition: 0.3s;
 `;
