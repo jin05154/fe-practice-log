@@ -11,8 +11,7 @@ export default function Input() {
   // 이메일 형식 확인
   const [valid, setValid] = useState(false);
   function validateEmail(email) {
-    const regexp =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const regexp = /^\S+@\S+\.\S+$/;
     if (regexp.test(email)) setValid(true);
     else setValid(false);
   }
