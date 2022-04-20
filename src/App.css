@@ -146,31 +146,37 @@ input:checked + .toggle-slider:before {
   display: flex;
   flex-direction: column;
 }
-.login-form {
-  padding: 10px 0;
+.login-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  padding: 10px 5px;
 }
-.input-wrap {
+.login-wrap p {
+  padding: 4px 13px;
+  font-size: 0.83em;
+}
+.input-form {
   display: flex;
   flex-direction: row;
-  width: 300px;
+}
+.input-form input {
+  width: 244px;
+  height: 40px;
+  padding: 0 44px 0 12px;
   background-color: var(--background-default);
   border: 2px solid var(--login-border);
   border-radius: 5px;
-}
-.input-form {
-  width: 250px;
-  height: 40px;
-  padding-left: 12px;
-  background: transparent;
-  outline: none;
-  border: none;
   font-size: 16px;
 }
-.input-icon {
-  display: flex;
+.input-form div {
+  display: inherit;
   justify-content: center;
   align-items: center;
-  width: 38px;
+  width: 30px;
+  height: 30px;
+  padding: 7px 4px;
+  margin-left: -40px;
 }
 #visible {
   cursor: pointer;

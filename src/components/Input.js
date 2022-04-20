@@ -22,37 +22,29 @@ export default function Input() {
       <h2 className="subtitle">4. Input</h2>
       <form>
         <div className="login">
-          <label className="login-form">
+          <div className="login-wrap">
             <p>E-mail</p>
-            <div className="input-wrap">
+            <label className="input-form">
               <input
                 type="email"
-                className="input-form"
                 placeholder="E-mail"
                 onChange={(e) => validateEmail(e.target.value)}
               />
-              <div className="input-icon">
-                {valid ? <ValidIcon /> : <InvalidIcon />}
-              </div>
-            </div>
-          </label>
-          <label className="login-form">
+              <div>{valid ? <ValidIcon /> : <InvalidIcon />}</div>
+            </label>
+          </div>
+          <div className="login-wrap">
             <p>Password</p>
-            <div className="input-wrap">
+            <label className="input-form">
               <input
                 type={visible ? "text" : "password"}
-                className="input-form"
                 placeholder="Password"
               />
-              <div
-                id="visible"
-                className="input-icon"
-                onClick={() => setVisible(!visible)}
-              >
+              <div id="visible" onClick={() => setVisible(!visible)}>
                 {visible ? <VisibleIcon /> : <InvisibleIcon />}
               </div>
-            </div>
-          </label>
+            </label>
+          </div>
         </div>
       </form>
     </>
