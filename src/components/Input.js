@@ -23,7 +23,7 @@ export default function Input() {
         <div className="login">
           <div className="login-wrap">
             <p>E-mail</p>
-            <label for="email" className="input-form">
+            <label htmlFor="email" className="input-form">
               <input
                 type="email"
                 placeholder="E-mail"
@@ -34,7 +34,7 @@ export default function Input() {
           </div>
           <div className="login-wrap">
             <p>Password</p>
-            <label for="password" className="input-form">
+            <label htmlFor="password" className="input-form">
               <input
                 type={visible ? "text" : "password"}
                 placeholder="Password"
