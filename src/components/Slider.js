@@ -1,38 +1,25 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 
 export default function Slider() {
-  const [startPosition, setStartPosition] = useState(0);
-  const [newPosition, setNewPosition] = useState(0);
-  const slider = useRef();
-  const getStartPosition = () => setStartPosition(slider.current.offsetLeft);
-
-  useEffect(() => {
-    getStartPosition();
-    console.log(startPosition);
-  }, [startPosition]);
-
-  useEffect(() => {
-    // 윈도우 크기 변경 시 startPosition 재계산
-    window.addEventListener("resize", getStartPosition);
-  });
+  const [rangeVal, setRangeVal] = useState(1);
 
   return (
     <>
       <h2 className="subtitle">3. Slider</h2>
       <div className="percentage">
-        <span>100</span>
+        <span>{rangeVal}</span>
         <span>%</span>
       </div>
-      <div className="slider">
-        <div className="inner-slider" ref={slider} draggable="true"></div>
-        <div className="slider-outline"></div>
-        <div className="milestones">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+      <label className="slider-wrap">
+        <input
+          type="range"
+          min={1}
+          max={100}
+          value={rangeVal}
+          onChange={(e) => setRangeVal(e.target.value)}
+          className="slider"
+          readOnly
+        />
         <div className="milestone-nums">
           <div>1%</div>
           <div>25%</div>
@@ -40,7 +27,7 @@ export default function Slider() {
           <div>75%</div>
           <div>100%</div>
         </div>
-      </div>
+      </label>
     </>
   );
 }
