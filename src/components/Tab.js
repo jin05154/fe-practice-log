@@ -40,7 +40,7 @@ export default function Tab() {
 const Slider = styled.div`
   width: 180px;
   height: 3px;
-  background-color: green;
+  background: var(--mint-green);
   z-index: 9999;
   transform: translateX(calc(${(props) => props.clicked} * 180px));
   transition: 0.3s;
