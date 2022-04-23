@@ -179,6 +179,8 @@ input:checked + .toggle-slider:before {
   height: 4px;
   background: var(--border-default);
   outline: none;
+  border-radius: 50px;
+  z-index: 9999;
 }
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -204,12 +206,12 @@ input:checked + .toggle-slider:before {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 376px;
-  margin: -10px;
+  width: 360px;
+  margin: -11px;
 }
 .milestones div {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: var(--border-default);
 }
@@ -236,6 +238,9 @@ input:checked + .toggle-slider:before {
 .milestone-nums div:hover {
   background: var(--mint-green);
   color: white;
+}
+#colored {
+  background: var(--mint-green);
 }
 
 /* Input */
