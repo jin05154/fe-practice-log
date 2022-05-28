@@ -1,6 +1,6 @@
-# FE Basics
+# FE Practic Log
 
-✨ FE Practice Log ✨
+✨ The most basic but the utmost essential ✨
 
 ## 1. Toggle
 
